@@ -417,14 +417,6 @@ int makeBCPayload(uint8_t *sendbuf, int bcindex)
 	sendbuf[10] = imei >> 16;
 	sendbuf[11] = imei >> 8;
 	sendbuf[12] = imei;
-		sendbuf[4] = numBeacon;
-	sendbuf[5] = imei >> 56; // 64bit IMEI
-	sendbuf[6] = imei >> 48;
-	sendbuf[7] = imei >> 40;
-	sendbuf[8] = imei >> 32;
-	sendbuf[9] = imei >> 24;
-	sendbuf[10] = imei >> 16;
-	sendbuf[11] = imei >> 8;
 	j = 13; // # header size
 	if (bcindex >= 0)
 	{
